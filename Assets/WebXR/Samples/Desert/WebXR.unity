@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 82741410}
-  m_IndirectSpecularColor: {r: 0.57859135, g: 0.60705847, b: 0.5485997, a: 1}
+  m_IndirectSpecularColor: {r: 0.31110105, g: 0.34539402, b: 0.28105247, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -301,7 +301,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: NaN, y: 2.2959e-41, z: NaN, w: 0}
+  m_BoundingSphereOverride: {x: 4.5905e-41, y: 0, z: 0, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1092,6 +1092,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ce7ab38d3cb40bfb531a81b9acac7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachJoint: {fileID: 0}
+  currentRigidBody: {fileID: 0}
+  contactRigidBodies: []
+  controller: {fileID: 0}
+  t: {fileID: 0}
+  lastPosition: {x: 0, y: 0, z: 0}
+  lastRotation: {x: 0, y: 0, z: 0, w: 0}
+  anim: {fileID: 0}
 --- !u!4 &874373040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 2b0960a38d49646e59e2a4b209a0ef93,
@@ -1355,8 +1363,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationEnabled: 1
   translationEnabled: 1
+  capabilities:
+    supportsInline: 0
+    supportsImmersiveVR: 0
+    supportsImmersiveAR: 0
+    isSecureContext: 0
   mouseSensitivity: 1
   straffeSpeed: 5
+  minimumX: -360
+  maximumX: 360
+  minimumY: -90
+  maximumY: 90
+  rotationX: 0
+  rotationY: 0
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  attachedCamera: {fileID: 0}
+  axis: {x: 0, y: 0, z: 0}
+  axisLastFrame: {x: 0, y: 0, z: 0}
+  axisDelta: {x: 0, y: 0, z: 0}
 --- !u!114 &1007871449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1685,6 +1709,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 20092747195267750, guid: c61e4de741d37461e85f25866d1ebd31,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20572450475250664, guid: c61e4de741d37461e85f25866d1ebd31,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20572450475250664, guid: c61e4de741d37461e85f25866d1ebd31,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20572450475250664, guid: c61e4de741d37461e85f25866d1ebd31,
+        type: 3}
+      propertyPath: m_TargetEye
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20930522213222284, guid: c61e4de741d37461e85f25866d1ebd31,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20930522213222284, guid: c61e4de741d37461e85f25866d1ebd31,
+        type: 3}
+      propertyPath: m_TargetEye
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 137037042967364456, guid: c61e4de741d37461e85f25866d1ebd31,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1695,6 +1749,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9cc560093ff884f819706e25b18c46e2, type: 2}
+    - target: {fileID: 869084216986337281, guid: c61e4de741d37461e85f25866d1ebd31,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c61e4de741d37461e85f25866d1ebd31, type: 3}
 --- !u!1001 &1451920843
@@ -1798,6 +1857,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ce7ab38d3cb40bfb531a81b9acac7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachJoint: {fileID: 0}
+  currentRigidBody: {fileID: 0}
+  contactRigidBodies: []
+  controller: {fileID: 0}
+  t: {fileID: 0}
+  lastPosition: {x: 0, y: 0, z: 0}
+  lastRotation: {x: 0, y: 0, z: 0, w: 0}
+  anim: {fileID: 0}
 --- !u!1 &1543435172
 GameObject:
   m_ObjectHideFlags: 0

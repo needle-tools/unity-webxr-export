@@ -38,6 +38,7 @@ namespace WebXR
 #elif UNITY_WEBGL
 			postRenderCoroutine = StartCoroutine(endOfFrame());
 #endif
+            onVRChange(WebXRState.ENABLED);
         }
 
         private void OnDisable()
