@@ -40,3 +40,7 @@ sysinfo.txt
 .idea
 JetBrains.meta
 Assets/Plugins/Editor/JetBrains
+Assets/BuildReports
+Builds-2
+Assets/BuildReports.meta
+Packages/packages-lock.json

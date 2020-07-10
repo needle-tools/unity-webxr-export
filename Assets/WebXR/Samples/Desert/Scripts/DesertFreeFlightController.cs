@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿#if UNITY_WEBGL
+
+using UnityEngine;
 using WebXR;
 
 [RequireComponent(typeof(Camera))]
@@ -117,3 +119,5 @@ public class DesertFreeFlightController : MonoBehaviour {
         return Mathf.Clamp (angle, min, max);
     }
 }
+
+#endif

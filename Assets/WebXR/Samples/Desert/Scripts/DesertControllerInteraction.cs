@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿#if UNITY_WEBGL
+
+using UnityEngine;
 using System.Collections.Generic;
 using WebXR;
 
@@ -111,3 +113,5 @@ public class DesertControllerInteraction : MonoBehaviour
         return nearestRigidBody;
     }
 }
+
+#endif
